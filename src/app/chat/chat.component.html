@@ -1,0 +1,13 @@
+<div class="full-container" *ngIf="!unauthorized">
+  <kat-input [userAuth]="userAuth"></kat-input>
+  <div class="msg-container" #msgContainer>
+    <kat-message
+      *ngFor="let msg of messages"
+      [message]="msg"
+      [userAuth]="userAuth"
+    ></kat-message>
+  </div>
+</div>
+<div *ngIf="unauthorized">
+  <h2>Get out, you're not authorized!</h2>
+</div>

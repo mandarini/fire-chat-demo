@@ -14,10 +14,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ChatComponent } from './chat/chat.component';
+import { InputComponent } from './input/input.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChatComponent,
+    InputComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
