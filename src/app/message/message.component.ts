@@ -11,5 +11,11 @@ export class MessageComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(
+      this.message,
+      this.message.timestamp,
+      this.message.timestamp.seconds
+    );
+  }
 }

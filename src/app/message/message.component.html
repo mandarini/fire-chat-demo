@@ -7,7 +7,7 @@
 >
   <p>
     <small
-      ><span>{{ userAuth }}</span
+      ><span>{{ message.user }}</span
       >-
       <span *ngIf="message.timestamp">
         {{ message.timestamp.seconds * 1000 | date: "medium" }}</span

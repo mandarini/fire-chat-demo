@@ -1,5 +1,8 @@
 export interface Message {
   user: string;
   msg: string;
-  timestamp: string;
+  timestamp: {
+    seconds: number;
+    nanoseconds: number;
+  };
 }
