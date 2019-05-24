@@ -1,0 +1,108 @@
+[debug] [2019-05-24T10:37:10.853Z] ----------------------------------------------------------------------
+[debug] [2019-05-24T10:37:10.854Z] Command:       /Users/katerinaskroumpelou/.nvm/versions/node/v10.15.3/bin/node /Users/katerinaskroumpelou/.nvm/versions/node/v10.15.3/bin/firebase deploy
+[debug] [2019-05-24T10:37:10.855Z] CLI Version:   6.6.0
+[debug] [2019-05-24T10:37:10.855Z] Platform:      darwin
+[debug] [2019-05-24T10:37:10.855Z] Node Version:  v10.15.3
+[debug] [2019-05-24T10:37:10.855Z] Time:          Fri May 24 2019 13:37:10 GMT+0300 (Eastern European Summer Time)
+[debug] [2019-05-24T10:37:10.855Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-24T10:37:10.862Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-24T10:37:10.862Z] > authorizing via signed-in user
+[debug] [2019-05-24T10:37:10.862Z] [iam] checking project chat-fire-angular for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-05-24T10:37:10.864Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-fire-angular:testIamPermissions  
+
+[debug] [2019-05-24T10:37:12.603Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-24T10:37:12.605Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chat-fire-angular  
+ 
+[debug] [2019-05-24T10:37:14.382Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'chat-fire-angular'...
+[info] 
+[info] i  deploying firestore, functions, hosting
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script.
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-05-24T10:37:28.842Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-fire-angular:test  
+
+[debug] [2019-05-24T10:37:48.349Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2019-05-24T10:37:48.351Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "~7.0.0",
+    "firebase-functions": "^2.2.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2019-05-24T10:37:48.352Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/chat-fire-angular?view=CONSUMER_VIEW  
+ 
+[debug] [2019-05-24T10:37:48.352Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/chat-fire-angular?view=CONSUMER_VIEW  
+ 
+[debug] [2019-05-24T10:37:57.768Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-24T10:37:59.484Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2019-05-24T10:37:59.485Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/chat-fire-angular  
+ 
+[debug] [2019-05-24T10:38:42.023Z] Error: Client network socket disconnected before secure TLS connection was established
+    at TLSSocket.onConnectEnd (_tls_wrap.js:1088:19)
+    at Object.onceWrapper (events.js:277:13)
+    at TLSSocket.emit (events.js:194:15)
+    at TLSSocket.EventEmitter.emit (domain.js:441:20)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Server Error. Client network socket disconnected before secure TLS connection was established
+[debug] [2019-05-24T10:49:25.673Z] ----------------------------------------------------------------------
+[debug] [2019-05-24T10:49:25.675Z] Command:       /Users/katerinaskroumpelou/.nvm/versions/node/v10.15.3/bin/node /Users/katerinaskroumpelou/.nvm/versions/node/v10.15.3/bin/firebase deploy
+[debug] [2019-05-24T10:49:25.675Z] CLI Version:   6.6.0
+[debug] [2019-05-24T10:49:25.675Z] Platform:      darwin
+[debug] [2019-05-24T10:49:25.675Z] Node Version:  v10.15.3
+[debug] [2019-05-24T10:49:25.676Z] Time:          Fri May 24 2019 13:49:25 GMT+0300 (Eastern European Summer Time)
+[debug] [2019-05-24T10:49:25.676Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-24T10:49:25.684Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-24T10:49:25.684Z] > authorizing via signed-in user
+[debug] [2019-05-24T10:49:25.685Z] [iam] checking project chat-fire-angular for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-05-24T10:49:25.686Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/chat-fire-angular:testIamPermissions  
+
+[debug] [2019-05-24T10:49:31.060Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-24T10:49:31.062Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chat-fire-angular  
+ 
+[debug] [2019-05-24T10:49:34.138Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'chat-fire-angular'...
+[info] 
+[info] i  deploying firestore, functions, hosting
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script.
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-05-24T10:49:53.346Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/chat-fire-angular:test  
+
+[debug] [2019-05-24T10:50:43.723Z] Error: Client network socket disconnected before secure TLS connection was established
+    at TLSSocket.onConnectEnd (_tls_wrap.js:1088:19)
+    at Object.onceWrapper (events.js:277:13)
+    at TLSSocket.emit (events.js:194:15)
+    at TLSSocket.EventEmitter.emit (domain.js:441:20)
+    at endReadableNT (_stream_readable.js:1125:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: Server Error. Client network socket disconnected before secure TLS connection was established
